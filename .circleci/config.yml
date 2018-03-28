@@ -15,6 +15,11 @@ jobs:
       - store_test_results:
           path: ~/project/junit.xml
 
+      - add_ssh_keys:
+ 	      fingerprints:
+ 	        - "SHA256:Ibs+QbZaEVcQEEruV/f+k5e/QygFtKplqcSnDUxafbM"
+
+
   android:
     working_directory: ~/project/android
     docker:
