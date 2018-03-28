@@ -15,9 +15,7 @@ jobs:
       - store_test_results:
           path: ~/project/junit.xml
 
-      - add_ssh_keys:
- 	      fingerprints:
- 	        - "SHA256:Ibs+QbZaEVcQEEruV/f+k5e/QygFtKplqcSnDUxafbM"
+     
 
 
   android:
@@ -59,7 +57,10 @@ jobs:
           path: /Users/distiller/project/output
       - store_test_results:
           path: /Users/distiller/project/output/scan
-
+          
+ - add_ssh_keys:
+ 	      fingerprints:
+ 	        - "SHA256:Ibs+QbZaEVcQEEruV/f+k5e/QygFtKplqcSnDUxafbM"
 workflows:
   version: 2
   node-android-ios:
